@@ -25,7 +25,7 @@ class SwiftFormat < Formula
   # out of the box on Xcode-only systems due to an incorrect sysroot.
   pour_bottle? only_if: :clt_installed
 
-  depends_on xcode: ["14.0", :build]
+  depends_on xcode: ["14.2", :build]
 
   uses_from_macos "swift"
 
