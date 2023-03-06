@@ -3,7 +3,7 @@ class SwiftFormat < Formula
   homepage "https://github.com/apple/swift-format"
   url "https://github.com/apple/swift-format.git",
       tag:      "0.50700.1",
-      revision: "3dd9b517b9e9846435aa782d769ef5825e7c2d65"
+      revision: "5f184220d032a019a63df457cdea4b9c8241e911"
   license "Apache-2.0"
   revision 1
   version_scheme 1
