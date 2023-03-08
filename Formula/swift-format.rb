@@ -32,7 +32,6 @@ class SwiftFormat < Formula
   def install
     # Support Swift 5.7.
     # Remove when minimum supported Swift >= 5.7.1.
-    inreplace "Package.swift", '.upToNextMinor(from: "0.50700.1")', '.exact("0.50700.1")' if OS.mac? && build.stable?
     # This can likely be removed with 0.50800.0
     swift_rpath = if OS.mac?
       ["-Xlinker", "-rpath", "-Xlinker", "/Library/Developer/CommandLineTools/usr/lib/swift/macosx"]
