@@ -25,13 +25,11 @@ class SwiftFormat < Formula
   # out of the box on Xcode-only systems due to an incorrect sysroot.
   pour_bottle? only_if: :clt_installed
 
-  depends_on xcode: ["14.2", :build]
+  depends_on xcode: ["14.0", :build]
 
   uses_from_macos "swift"
 
   def install
-    # Support Swift 5.7.
-    # Remove when minimum supported Swift >= 5.7.1.
     # This can likely be removed with 0.50800.0
     swift_rpath = if OS.mac?
       ["-Xlinker", "-rpath", "-Xlinker", "/Library/Developer/CommandLineTools/usr/lib/swift/macosx"]
