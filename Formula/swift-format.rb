@@ -30,7 +30,7 @@ class SwiftFormat < Formula
   uses_from_macos "swift"
 
   def install
-    system "swift", "build", "--disable-sandbox", "-c", "release", *swift_rpath
+    system "swift", "build", "-c", "release"
     bin.install ".build/release/swift-format"
     doc.install "Documentation/Configuration.md"
   end
