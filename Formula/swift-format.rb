@@ -30,11 +30,6 @@ class SwiftFormat < Formula
   uses_from_macos "swift"
 
   def install
-    # This can likely be removed with 0.50800.0
-    swift_rpath = if OS.mac?
-      ["-Xlinker", "-rpath", "-Xlinker", "/Library/Developer/CommandLineTools/usr/lib/swift/macosx"]
-    end
-
     system "swift", "build", "--disable-sandbox", "-c", "release", *swift_rpath
     bin.install ".build/release/swift-format"
     doc.install "Documentation/Configuration.md"
